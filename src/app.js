@@ -1,3 +1,5 @@
-var path = document.querySelector("svg path");
-var total_length = path.getTotalLength();
-console.log(total_length);
+
+    setTimeout(() => {
+        const $logo = document.getElementById("logo");
+        $logo.className += "animate";
+    },500);

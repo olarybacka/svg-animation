@@ -46,9 +46,10 @@
 
 	"use strict";
 
-	var path = document.querySelector("svg path");
-	var total_length = path.getTotalLength();
-	console.log(total_length);
+	setTimeout(function () {
+	    var $logo = document.getElementById("logo");
+	    $logo.className += "animate";
+	}, 500);
 
 /***/ }
 /******/ ]);
