@@ -1,12 +1,21 @@
 body{
   background: #22436e;
+  display: flex;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+}
+
+#logo{
+    width: 400px;
+    margin: auto;
+    position: relative;
+    height: 200px;
 }
 
 svg {
-  max-width: 95%;
-  max-height: 95%;
   position: absolute;
-  top: 0;
+  top: -7px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -15,6 +24,7 @@ svg {
 path {
   transform: scale(0.78) translate(-596px, -857px);
   fill-opacity: 0;
+  stroke-opacity: 0;
   stroke: #fff;
   stroke-width: 1;
   stroke-dasharray: 147;
@@ -63,6 +73,7 @@ circle{
 
 @keyframes draw {
   to {
+      stroke-opacity: 1;
     stroke-dashoffset: 0;
   }
 }
