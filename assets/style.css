@@ -1,19 +1,21 @@
-body{
+.logo-anim__overlay{
   background: #22436e;
   display: flex;
   height: 100%;
   position: fixed;
   width: 100%;
+  top: 0;
+  left: 0;
 }
 
-#logo{
+.logo-anim__container{
     width: 400px;
     margin: auto;
     position: relative;
     height: 200px;
 }
 
-svg {
+.logo-anim {
   position: absolute;
   top: -7px;
   left: 0;
@@ -21,59 +23,60 @@ svg {
   bottom: 0;
 }
 
-path {
-  transform: scale(0.78) translate(-596px, -857px);
-  fill-opacity: 0;
-  stroke-opacity: 0;
-  stroke: #fff;
-  stroke-width: 1;
-  stroke-dasharray: 147;
-  stroke-dashoffset: 147;
-  fill: #fff; 
-  
-}
-.animate path{
-  animation-name: draw, fill;
-  animation-delay: 1000ms, 1500ms;
-  animation-duration: 1s, 500ms;
-  animation-fill-mode: forwards, forwards;
-}
+  .logo-anim path {
+    transform: scale(0.78) translate(-596px, -857px);
+    fill-opacity: 0;
+    stroke-opacity: 0;
+    stroke: #fff;
+    stroke-width: 1;
+    stroke-dasharray: 147;
+    stroke-dashoffset: 147;
+    fill: #fff; 
+  }
+    
+  .animate .logo-anim path{
+    animation-name: draw, fill;
+    animation-delay: 1300ms, 1800ms;
+    animation-duration: 1s, 500ms;
+    animation-fill-mode: forwards, forwards;
+  }
 
-
-circle{
-  fill-opacity: 0;
-  opacity: 0;
-  transform: rotate(24deg) translate(-25px, -20px);
-  stroke: #fff;
-  stroke-width: 3;
-  stroke-dasharray: 258;
-  stroke-dashoffset: 258;
-}
-.animate circle{
-  animation: draw, show;
-  animation-duration: 1200ms, 500ms;
-  animation-timing-function: ease, ease-in;
-  animation-fill-mode: forwards, forwards;
-}
+  .logo-anim circle{
+    fill-opacity: 0;
+    opacity: 0;
+    transform: rotate(24deg) translate(-25px, -20px);
+    stroke: #fff;
+    stroke-width: 3;
+    stroke-dasharray: 258;
+    stroke-dashoffset: 258;
+  }
+  .animate .logo-anim circle{
+    animation: draw, show;
+    animation-duration: 1200ms, 500ms;
+    animation-delay: 300ms;
+    animation-timing-function: ease, ease-in;
+    animation-fill-mode: forwards, forwards;
+  }
 
 .show{
   position: absolute;
   left: 7px;
   opacity: 0;
 }
-.animate .show{
-  animation-name: show;
-  animation-delay: 1.5s;
-  animation-duration: 900ms;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-}
+
+  .animate .show{
+    animation-name: show;
+    animation-delay: 1.8s;
+    animation-duration: 900ms;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
 
 
 @keyframes draw {
   to {
-      stroke-opacity: 1;
+    stroke-opacity: 1;
     stroke-dashoffset: 0;
   }
 }
